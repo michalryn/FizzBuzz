@@ -28,12 +28,12 @@ namespace FizzBuzzWeb2.Pages
                 }
                 return Page();
             }
-            /*
+            
             TempData["AlertMessage"] = FizzBuzz.Check();
             if (string.IsNullOrWhiteSpace(Name))
             {
                 Name = "User";
-            }*/
+            }
             return Page();
         }
 

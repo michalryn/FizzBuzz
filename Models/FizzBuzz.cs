@@ -9,7 +9,7 @@ namespace FizzBuzzWeb2.Models
          Range(1, 1000, ErrorMessage = "Oczekiwana wartość {0} z zakresu {1} i {2}.")]
         public int? Number { get; set; }
         
-        /*public string? Check()
+        public string? Check()
         {
             if (Number % 3 == 0 && Number % 5 == 0)
                 return "FizzBuzz";
@@ -20,6 +20,6 @@ namespace FizzBuzzWeb2.Models
             else if (Number == null)
                 return null;
             return $"Liczba: {Number} nie spełnia kryteriów FizzBuzz";
-        }*/
+        }
     }
 }
