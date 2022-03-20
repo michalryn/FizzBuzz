@@ -1,0 +1,25 @@
+﻿@page
+@using FizzBuzzWeb2.Models
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<form method="post">
+    <h1 class="display-4">Welcome @Model.Name</h1>
+    <div class="mb-3">
+        <label asp-for="FizzBuzz.Number" class="form-label"></label>
+        <input class="form-control" asp-for="FizzBuzz.Number" />
+        <span asp-validation-for="FizzBuzz.Number" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Zatwierdź</button>
+    @*@if (TempData["AlertMessage"] != null)
+    {
+        <div class="alert alert-success mt-3 p-3" role="alert">
+            @TempData["AlertMessage"]
+        </div>
+    }*@
+</form>
+
