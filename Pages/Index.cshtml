@@ -12,13 +12,18 @@
     <div class="mb-3">
         <label asp-for="FizzBuzz.Number" class="form-label"></label>
         <input class="form-control" asp-for="FizzBuzz.Number" />
-        <span asp-validation-for="FizzBuzz.Number" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary">Zatwierdź</button>
     @if (TempData["AlertMessage"] != null)
     {
         <div class="alert alert-success mt-3 p-3" role="alert">
             @TempData["AlertMessage"]
+        </div>
+    }
+    @if (!ModelState.IsValid)
+    {
+        <div class="alert alert-danger mt-3 p-3" role="alert">
+            <span asp-validation-for="FizzBuzz.Number"></span>
         </div>
     }
 </form>
